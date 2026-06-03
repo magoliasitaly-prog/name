@@ -7,13 +7,34 @@
   <link rel="shortcut icon" href="apple-icon.png">
   <link rel="apple-touch-icon" href="apple-icon.png">
   <title>Claude</title>
+  <style>
+    * { box-sizing: border-box; }
+    html, body { height: 100%; margin: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro", system-ui, sans-serif;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      gap: 28px; background: #faf9f7; color: #1a1a1a;
+    }
+    img.logo { width: 88px; height: 88px; }
+    h1 { margin: 0; font-size: 22px; font-weight: 600; letter-spacing: .2px; }
+    a.btn {
+      display: inline-flex; align-items: center; gap: 10px;
+      padding: 16px 34px; border-radius: 14px;
+      background: #c96442; color: #fff; text-decoration: none;
+      font-size: 18px; font-weight: 600;
+      box-shadow: 0 6px 18px rgba(201,100,66,.28);
+      transition: transform .12s ease, box-shadow .12s ease, background .12s ease;
+    }
+    a.btn:hover { background: #b4583a; transform: translateY(-1px); box-shadow: 0 8px 22px rgba(201,100,66,.34); }
+    a.btn:active { transform: translateY(0); box-shadow: 0 4px 12px rgba(201,100,66,.28); }
+    p.hint { margin: 0; color: #8a8a8a; font-size: 13px; }
+  </style>
 </head>
-<body style="margin:0;font-family:-apple-system,system-ui,sans-serif;display:flex;flex-direction:column;height:100vh;align-items:center;justify-content:center;color:#888;gap:16px">
-  <img src="apple-icon.png" width="96" height="96" alt="">
-  <p style="margin:0">正在打开 Claude…</p>
-  <script>
-    // 停留约 1.5 秒，给 Safari 时间加载并缓存图标，再跳转
-    setTimeout(function(){ location.replace("https://claude.ai"); }, 1500);
-  </script>
+<body>
+  <img class="logo" src="apple-icon.png" alt="">
+  <h1>打开 Claude</h1>
+  <a class="btn" href="https://claude.ai">进入 Claude →</a>
+  <p class="hint">收藏栏图标会一直保持为这个图标</p>
 </body>
 </html>
