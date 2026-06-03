@@ -3,12 +3,17 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/png" href="apple-icon.png">
+  <link rel="icon" type="image/png" sizes="256x256" href="apple-icon.png">
+  <link rel="shortcut icon" href="apple-icon.png">
+  <link rel="apple-touch-icon" href="apple-icon.png">
   <title>Claude</title>
-  <meta http-equiv="refresh" content="0; url=https://claude.ai">
-  <script>location.replace("https://claude.ai");</script>
 </head>
-<body style="margin:0;font-family:-apple-system,system-ui,sans-serif;display:flex;height:100vh;align-items:center;justify-content:center;color:#888">
-  正在跳转到 Claude… <a href="https://claude.ai">点此手动进入</a>
+<body style="margin:0;font-family:-apple-system,system-ui,sans-serif;display:flex;flex-direction:column;height:100vh;align-items:center;justify-content:center;color:#888;gap:16px">
+  <img src="apple-icon.png" width="96" height="96" alt="">
+  <p style="margin:0">正在打开 Claude…</p>
+  <script>
+    // 停留约 1.5 秒，给 Safari 时间加载并缓存图标，再跳转
+    setTimeout(function(){ location.replace("https://claude.ai"); }, 1500);
+  </script>
 </body>
 </html>
